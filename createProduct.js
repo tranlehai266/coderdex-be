@@ -19,7 +19,7 @@ const createProduct = async () => {
   });
 
   newData = uniqueData.map((pokemon) => ({
-    id: parseInt(pokemon["#"]), // Là ban đầu # : "25" sau đó đổi thành id : và parseInt # : "25" thành id : 25 nói cách khác truy cập chuỗi # biến thành 25
+    id: parseInt(pokemon["#"]), // Là ban đầu # : "25" sau đó đổi thành id: và parseInt # : "25" thành id : 25 nói cách khác truy cập chuỗi # biến thành 25
     name: pokemon["Name"],
     description: faker.lorem.paragraph(),
     height: `${faker.number.float({ max: 2 }).toFixed(2)}'`,

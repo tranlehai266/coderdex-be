@@ -107,11 +107,12 @@ router.put("/:id", (req, res, next) => {
     // Tìm mục cần cập nhật
     const targetIndex = pokemon.data.findIndex((e) => e.id === parseInt(id));
 
-    if (targetIndex < 0) {
+    if (targetIndex < 0 && !targetIndex) {
       const exception = new Error(`Pokemon not found`);
       exception.statusCode = 404;
       return next(exception);
     }
+    
 
     // Cập nhật dữ liệu
     const updatePokemon = {
