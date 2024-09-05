@@ -27,7 +27,7 @@ const createProduct = async () => {
     category: faker.music.genre(),
     abilities: faker.person.jobDescriptor(),
     types: [pokemon["Type 1"], pokemon["Type 2"]].filter(Boolean),
-    url: `http://localhost:8000/images/${pokemon["#"]}.png`,
+    url: `https://coderdex-be-9c5u.onrender.com/${pokemon["#"]}.png`,
   }));
 
   // Đọc dữ liệu từ tệp JSON nếu có, nếu không thì khởi tạo dữ liệu rỗng
